@@ -1,7 +1,7 @@
-NAME = replace
+NAME = annuaire
 OPTION = -c
-FLAG = -Wall -Wextra -Werror
-SRC = main.cpp
+FLAG = -Wall -Wextra -Werror -std=c++98
+SRC = main.cpp Contact.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
