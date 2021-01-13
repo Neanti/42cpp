@@ -8,16 +8,16 @@ SuperTrap::~SuperTrap() {
     return;
 }
 
-SuperTrap::SuperTrap(std::string n) : ClapTrap(n), FragTrap(n), NinjaTrap(n){
-    this->hp = FragTrap::hp;
-    this->mhp = FragTrap::mhp;
-    this->ep = NinjaTrap::ep;
-    this->mep = NinjaTrap::mep;
+SuperTrap::SuperTrap(std::string n) : ClapTrap(n), NinjaTrap(n), FragTrap(n){
+    this->hp = 100;
+    this->mhp = 100;
+    this->ep = 120;
+    this->mep = 120;
     this->lvl = 1;
-    this->mdmg = NinjaTrap::mdmg;
-    this->rdmg = FragTrap::rdmg;
-    this->armor = FragTrap::armor;
-    std::cout << "SuperTrap " << this->FragTrap::hp  << " is born !" << std::endl;
+    this->mdmg = 60;
+    this->rdmg = 20;
+    this->armor = 5;
+    std::cout << "SuperTrap " << name << "is born !" << std::endl;
     return;
 }
 

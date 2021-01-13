@@ -16,6 +16,7 @@ public:
     void ninjaShoebox(NinjaTrap const &trap);
     void ninjaShoebox(ScavTrap const &trap);
     void ninjaShoebox(FragTrap const &trap);
+    void ninjaShoebox(ClapTrap const &trap);
 
 };
 

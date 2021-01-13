@@ -42,3 +42,9 @@ void NinjaTrap::ninjaShoebox(const ScavTrap &trap) {
     std::cout << "N1NJ4-TR4P " << name << " loves SC4V-TR4P " << trap.getName() << " !!!" << std::endl;
     return;
 }
+
+
+void NinjaTrap::ninjaShoebox(const ClapTrap &trap) {
+    std::cout << "N1NJ4-TR4P " << name << " doesn't care about CL4P-TR4P " << trap.getName() << " !!!" << std::endl;
+    return;
+}

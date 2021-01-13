@@ -9,7 +9,7 @@ FragTrap::FragTrap(std::string n) : ClapTrap(n){
     mdmg = 30;
     rdmg = 20;
     armor = 5;
-    std::cout << "FR4G-TP " << hp << " is born !" << std::endl;
+    std::cout << "FR4G-TP " << name << " is born !" << std::endl;
     return;
 }
 

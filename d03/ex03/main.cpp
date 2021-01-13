@@ -47,10 +47,12 @@ int main()
     FragTrap *f2 = new FragTrap("BobbY");
     ScavTrap *s2 = new ScavTrap("Billy");
     NinjaTrap *n2 = new NinjaTrap("Bonny");
+    ClapTrap *c2 = new ClapTrap("Clap");
 
     n1->ninjaShoebox(*f2);
     n1->ninjaShoebox(*s2);
     n1->ninjaShoebox(*n2);
+    n1->ninjaShoebox(*c2);
     delete f2;
     delete s2;
     delete n2;

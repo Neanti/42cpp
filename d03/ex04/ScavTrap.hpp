@@ -5,7 +5,7 @@
 #include <fstream>
 #include <random>
 
-class ScavTrap : public ClapTrap{
+class ScavTrap : virtual public ClapTrap{
 public:
     ScavTrap(std::string n);
     ~ScavTrap();
