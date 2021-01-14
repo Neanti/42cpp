@@ -1,5 +1,8 @@
-#ifndef ICHAR
-#define ICHAR
+#ifndef ICHAR_HPP
+#define ICHAR_HPP
+#include <iostream>
+
+class AMateria;
 
 class ICharacter {
 public:

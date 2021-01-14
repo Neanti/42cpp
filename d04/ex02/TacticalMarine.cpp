@@ -1,7 +1,7 @@
-#include "ISquad.hpp"
+#include "TacticalMarine.hpp"
 
 TacticalMarine::TacticalMarine() {
-    std::cout << "Tactical Marine ready for action !" << std::cout;
+    std::cout << "Tactical Marine ready for action !" << std::endl;
     return;
 }
 
@@ -19,4 +19,9 @@ void TacticalMarine::meleeAttack() const {
 
 TacticalMarine::~TacticalMarine() {
     std::cout << "Aaargh ..." << std::endl;
+}
+
+TacticalMarine * TacticalMarine::clone() const {
+    TacticalMarine *a = new TacticalMarine();
+    return a;
 }

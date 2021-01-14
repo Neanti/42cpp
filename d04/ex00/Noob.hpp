@@ -5,7 +5,7 @@
 class Noob : public Peon{
 public:
     Noob(std::string n);
-    ~Noob();
+    virtual ~Noob();
     virtual void getPolymorphed() const;
 private:
     Noob();

@@ -6,6 +6,8 @@ Character::Character(const std::string &name) : name(name), AP(40), weapon(NULL)
 
 void Character::recoverAP() {
     AP += 10;
+    if (AP > 40)
+        AP = 40;
     return;
 }
 
@@ -44,8 +46,8 @@ AWeapon *Character::getWeapon() const {
 
 std::ostream & operator<<(std::ostream &output, const Character &c) {
     if (c.getWeapon() != NULL)
-        output << c.getName() << " has " << c.getAP() << " and wields a " << c.getWeapon()->getName() << std::endl;
+        output << c.getName() << " has " << c.getAP() << "AP and wields a " << c.getWeapon()->getName() << std::endl;
     else
-        output << c.getName() << " has " << c.getAP() << " and is unarmed " << std::endl;
+        output << c.getName() << " has " << c.getAP() << "AP and is unarmed " << std::endl;
     return output;
 }

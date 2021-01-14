@@ -2,14 +2,14 @@
 #define SQUAD
 #include "ISquad.hpp"
 
-class Squad : virtual public ISquad {
+class Squad : public ISquad {
 public:
-    ~Squad();
+    virtual ~Squad();
     Squad();
-    int getCount() const;
-   ISpaceMarine* getUnit(int i) const;
-   int push(ISpaceMarine* m);
-    Squad &operator=(const Squad &s);
+    virtual int getCount() const;
+    virtual ISpaceMarine* getUnit(int i) const;
+    virtual int push(ISpaceMarine* m);
+    Squad  &operator=(const Squad &s);
     Squad(const Squad &s);
 private:
     ISpaceMarine **spaceMarine;

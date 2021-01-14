@@ -1,5 +1,7 @@
-#ifndef  IMATERIA
-#define IMATERIA
+#ifndef  IMATERIA_HPP
+#define IMATERIA_HPP
+#include "AMateria.hpp"
+#include <iostream>
 
 class IMateriaSource {
 public:

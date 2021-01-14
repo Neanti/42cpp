@@ -1,6 +1,9 @@
-#ifnedf AMATERIA
-#define AMATERIA
+#ifndef AMATERIA_HPP
+#define AMATERIA_HPP
 #include <iostream>
+#include "ICharacter.hpp"
+class ICharacter;
+
 
 class AMateria {
 private:
@@ -13,8 +16,10 @@ public:
     virtual ~AMateria();
     std::string const &getType() const;
     unsigned int getXP() const;
+    void setXP(unsigned int i);
     virtual AMateria *clone() const = 0;
     virtual void use(ICharacter &target);
+    AMateria();
 };
 
 #endif

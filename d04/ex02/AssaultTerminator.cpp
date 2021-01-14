@@ -1,7 +1,7 @@
 #include "ISquad.hpp"
 
 AssaultTerminator::AssaultTerminator() {
-    std::cout << "* teleports from space *" << std::cout;
+    std::cout << "* teleports from space *" << std::endl;
     return;
 }
 
@@ -19,4 +19,9 @@ void AssaultTerminator::meleeAttack() const {
 
 AssaultTerminator::~AssaultTerminator() {
     std::cout << "I'll be back ..." << std::endl;
+}
+
+AssaultTerminator * AssaultTerminator::clone() const {
+    AssaultTerminator *a = new AssaultTerminator();
+    return a;
 }

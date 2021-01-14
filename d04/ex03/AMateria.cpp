@@ -1,6 +1,4 @@
 #include "AMateria.hpp"
-#include "Cure.hpp"
-#include "Ice.hpp"
 
 AMateria::AMateria(const std::string &type) : type(type){
     return;
@@ -15,6 +13,10 @@ unsigned int AMateria::getXP() const {
 }
 
 void AMateria::use(ICharacter &target) {
+    if(type == "cure")
+        std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
+    else if (type == "ice")
+        std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
     _xp += 10;
     return;
 }
@@ -24,5 +26,10 @@ AMateria::~AMateria() {
 }
 
 AMateria::AMateria() {
+    return;
+}
+
+void AMateria::setXP(unsigned int i) {
+    _xp = i;
     return;
 }

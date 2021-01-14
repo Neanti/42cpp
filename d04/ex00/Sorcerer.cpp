@@ -23,7 +23,7 @@ std::ostream & operator<<(std::ostream &output, const Sorcerer &s) {
     return output;
 }
 
-void Sorcerer::polymorph(const Victim &v) {
+void Sorcerer::polymorph(const Victim &v) const {
     v.getPolymorphed();
     return;
 }

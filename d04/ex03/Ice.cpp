@@ -9,13 +9,12 @@ Ice::~Ice() {
 }
 
 void Ice::use(ICharacter &target){
-    std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
-    _xp += 10;
+    this->AMateria::use(target);
     return;
 }
 
 AMateria * Ice::clone() const {
     AMateria *a = new Ice();
-    a._xp = _xp;
+    a->setXP(this->getXP());
     return a;
 }

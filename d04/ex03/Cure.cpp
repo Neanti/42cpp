@@ -9,13 +9,12 @@ Cure::~Cure() {
 }
 
 void Cure::use(ICharacter &target){
-    std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
-    _xp += 10;
+    this->AMateria::use(target);
     return;
 }
 
 AMateria * Cure::clone() const {
     AMateria *a = new Cure();
-    a._xp = _xp;
+    a->setXP(this->getXP());
     return a;
 }

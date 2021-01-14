@@ -1,16 +1,19 @@
 #ifndef TACTICAL
 #define TACTICAL
-#include "ISquad.hpp"
 #include "ISpaceMarine.hpp"
 
-class TacticalMarine : virtual public ISpaceMarine {
+class TacticalMarine : public ISpaceMarine {
 public:
     virtual TacticalMarine *clone(void) const;
     TacticalMarine();
-    ~TacticalMarine();
+    virtual ~TacticalMarine();
     virtual void battleCry(void) const;
     virtual void rangedAttack(void) const;
     virtual void meleeAttack(void) const;
+
+private:
+    TacticalMarine &operator=(const TacticalMarine &t);
+    TacticalMarine(const TacticalMarine &t);
 };
 
 #endif

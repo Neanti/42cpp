@@ -8,6 +8,8 @@ void Enemy::takeDamage(int d) {
     else
     {
         HP -= d;
+        if(HP < 0)
+            HP = 0;
         return;
     }
 }
