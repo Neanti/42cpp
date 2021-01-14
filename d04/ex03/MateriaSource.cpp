@@ -1,14 +1,14 @@
 #include "MateriaSource.hpp"
 
 void MateriaSource::learnMateria(AMateria *m) {
-    if (m == nullptr || n > 3)
+    if (m == 0 || n > 3)
         return;
     int i;
 
     i = 0;
     while(i < 4)
     {
-        if (list[i] == nullptr) {
+        if (list[i] == 0) {
             list[i] = m->clone();
             n++;
             return;
@@ -38,7 +38,7 @@ MateriaSource::~MateriaSource() {
 
     while(i < 4)
     {
-        if (list[i] != nullptr)
+        if (list[i] != 0)
             delete list[i];
         i++;
     }
@@ -50,6 +50,6 @@ MateriaSource::MateriaSource() {
 
     i = 0;
     while(i < 4)
-        list[i++] = nullptr;
+        list[i++] = 0;
     return;
 }

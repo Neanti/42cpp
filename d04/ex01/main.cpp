@@ -4,6 +4,8 @@
 #include "SuperMutant.hpp"
 #include "RadScorpion.hpp"
 #include "Character.hpp"
+#include "ArmeNulle.hpp"
+#include "EnemyChiant.hpp"
 
 int main()
 {
@@ -54,6 +56,11 @@ int main()
     me->attack(c);
     std::cout << *me;
     me->attack(c);
+
+    AWeapon *n = new ArmeNulle();
+    Enemy *ec = new EnemyChiant();
+    me->equip(n);
+    me->attack(ec);
 
     return 0;
 }

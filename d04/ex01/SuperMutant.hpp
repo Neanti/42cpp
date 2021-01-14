@@ -8,7 +8,7 @@ private:
     SuperMutant &operator=(const SuperMutant &s);
 public:
     SuperMutant();
-    ~SuperMutant();
+    virtual ~SuperMutant();
     void takeDamage(int);
 };
 

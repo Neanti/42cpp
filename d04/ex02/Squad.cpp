@@ -3,7 +3,7 @@
 
 Squad::Squad() {
     this->number = 0;
-    this->spaceMarine = nullptr;
+    this->spaceMarine = 0;
     return;
 }
 
@@ -63,7 +63,7 @@ int Squad::getCount() const {
 
 ISpaceMarine * Squad::getUnit(int i) const {
     if (i >= number)
-        return nullptr;
+        return 0;
     return (spaceMarine[i]);
 }
 
@@ -71,7 +71,7 @@ int Squad::push(ISpaceMarine *m) {
     int j;
 
     j = 0;
-    if(m == nullptr)
+    if(m == 0)
         return number;
     if(number == 0)
     {

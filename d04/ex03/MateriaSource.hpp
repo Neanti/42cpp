@@ -10,7 +10,7 @@ private:
     AMateria *list[4];
     int n;
 public:
-    ~MateriaSource();
+    virtual ~MateriaSource();
     virtual void learnMateria(AMateria *);
     virtual AMateria *createMateria(std::string const &type);
     MateriaSource();

@@ -12,7 +12,7 @@ int main()
     vlc->push(bob);
     vlc->push(jim);
     vlc->push(jim);
-    vlc->push(nullptr);
+    vlc->push(0);
     Squad *c = new Squad();
     *c = *vlc;
 

@@ -12,6 +12,8 @@ void Character::recoverAP() {
 }
 
 void Character::attack(Enemy *e) {
+    if (weapon == 0)
+        return;
     if (weapon->getAPCost() > AP)
         return;
     std::cout << name << " attacks " << e->getType() << " with a " << weapon->getName() << std::endl;

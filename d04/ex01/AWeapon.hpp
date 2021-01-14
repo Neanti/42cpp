@@ -12,7 +12,7 @@ private:
     AWeapon &operator=(const AWeapon &w);
 public:
     AWeapon(std::string const & name, int apcost, int damage);
-    ~AWeapon();
+    virtual ~AWeapon();
     std::string getName() const;
     int getAPCost() const;
     int getDamage() const;

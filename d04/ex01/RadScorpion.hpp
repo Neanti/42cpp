@@ -8,7 +8,7 @@ private:
     RadScorpion &operator=(const RadScorpion &s);
 public:
     RadScorpion();
-    ~RadScorpion();
+    virtual ~RadScorpion();
     void takeDamage(int);
 };
 
