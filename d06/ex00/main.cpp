@@ -17,7 +17,7 @@ bool is_disp(char c)
 
 void display(char c, int i, bool di, float f, bool df, double d)
 {
-    if (is_disp(c))
+    if (c >= 33 && c <= 126)
         std::cout << "char: '" << c << "'" << std::endl;
     else
         std::cout << "char: Non displayable" << std::endl;
@@ -32,7 +32,6 @@ void display(char c, int i, bool di, float f, bool df, double d)
     std::cout << "double: " << d << std::endl;
     return;
 }
-
 
 int main(int ac, char **av)
 {
@@ -58,7 +57,7 @@ int main(int ac, char **av)
         bool df = true;
         if (isnan(c))
             di = false;
-        if (c > INT_MAX || c < INT_MIN)
+        if (c > std::numeric_limits<int>::max() || c < std::numeric_limits<int>::min())
             di = false;
         if ((c > std::numeric_limits<float>::max() || c < std::numeric_limits<float>::min()) && (c > 10 || c < -10))
             df = false;

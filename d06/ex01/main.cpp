@@ -43,7 +43,7 @@ Data *deserialize(void *raw)
 int main()
 {
     srand(time(NULL));
-    Data *d = new Data;
+    Data *d;
     d = deserialize(serialize());
     std::cout << "s1=" << d->s1 << " s2=" << d->s2 << " n=" << d->n << std::endl;
     return 0;
