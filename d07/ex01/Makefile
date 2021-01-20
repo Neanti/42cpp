@@ -1,4 +1,4 @@
-NAME = Serialization
+NAME = Iter
 OPTION = -c
 FLAG = -Wall -Wextra -Werror -std=c++98
 SRC = main.cpp

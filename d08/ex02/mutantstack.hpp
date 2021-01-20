@@ -26,15 +26,16 @@ MutantStack<T>::MutantStack() : std::stack<T>() {
     return;
 }
 
-template <typename T>
+template <class T>
 typename MutantStack<T>::iterator	MutantStack<T>::begin()
 {
     return (std::begin(std::stack<T>::c));
 }
 
-template <typename T>
+template <class T>
 typename MutantStack<T>::iterator	MutantStack<T>::end()
 {
     return (std::end(std::stack<T>::c));
 }
+
 #endif
