@@ -61,4 +61,17 @@ int * span::getList() const {
     return list;
 }
 
-
+void span::populate() {
+    unsigned int i = 0;
+    if (len != 0)
+        return;
+    while(i < this->cap) {
+        int j = rand();
+        if (rand() % 2)
+            j *= -1;
+        this->list[i] = j;
+        i++;
+    }
+    this->len = this->cap;
+    return;
+}

@@ -25,5 +25,27 @@ while(it != ite)
     ++it;
 }
 std::stack<int> s(mstack);
+
+
+    MutantStack<char>    cstack;
+    cstack.push('A');
+    cstack.push('H');
+    std::cout << cstack.top() << std::endl;
+    cstack.pop();
+    std::cout << cstack.size() << std::endl;
+    cstack.push('P');
+    cstack.push('O');
+    cstack.push('k');
+
+    cstack.push(0);
+    MutantStack<char>::iterator ic = cstack.begin();
+    MutantStack<char>::iterator ice = cstack.end();
+    ++ic;
+    --ic;
+    while(ic != ice)
+    {
+        std::cout << *ic << std::endl;
+        ++ic;
+    }
 return 0;
 }

@@ -2,6 +2,7 @@
 #define SPAN_HPP
 #include <exception>
 #include <algorithm>
+#include <iostream>
 
 class span {
 private:
@@ -15,6 +16,7 @@ public:
     ~span();
     span(unsigned int n);
     void addNumber(int n);
+    void populate(void);
     long int shortestSpan() const;
     long int longestSpan() const;
     int *getList(void) const;
